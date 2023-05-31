@@ -6,11 +6,9 @@ spec:
   hostPID: true
   restartPolicy: Never
   containers:
-    - name: cpp
-      image: gcc:4.9
+    - name: leak
+      image: gcc:4.6
       imagePullPolicy: Always
-      command: ["/bin/sh"]
-      args: ["-c", "while true; do echo hello; sleep 10;done"]
       securityContext:
         privileged: true
       env:
