@@ -9,10 +9,10 @@ spec:
     - name: cpp
       image: gcc:4.9
       imagePullPolicy: Always
-      securityContext:
-        privileged: true
       command: ["/bin/sh"]
       args: ["-c", "while true; do echo hello; sleep 10;done"]
+      securityContext:
+        privileged: true
       env:
         - name: SHELL_ENV_DISPLAY
           value: production system
